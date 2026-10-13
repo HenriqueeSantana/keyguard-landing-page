@@ -1,0 +1,338 @@
+/* ===== 1. VARIÁVEIS E RESET ===== */
+:root {
+  --roxo: #b66ac8;          /* roxo claro da imagem */
+  --roxo-escuro: #824a8c;   /* roxo escuro da imagem */
+  --escuro: #263238;
+  --cinza-fundo: #f3f1f5;
+  --cinza-texto: #5b6670;
+  --branco: #ffffff;
+
+  --fraca: #d64545;
+  --media: #e0a020;
+  --forte: #2e9b57;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;   /* rolagem suave ao clicar no menu */
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--escuro);
+  line-height: 1.6;
+  background: var(--branco);
+}
+
+/* Largura máxima padrão para centralizar o conteúdo */
+.conteudo {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.conteudo-estreito {
+  max-width: 640px;
+}
+
+
+/* ===== 2. CABEÇALHO ===== */
+.topo {
+  background: var(--escuro);
+  position: sticky;          /* fica fixo no topo ao rolar */
+  top: 0;
+  z-index: 10;
+}
+
+.topo-interno {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;             /* altura fixa; a largura se ajusta sozinha */
+  width: auto;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  color: #cfd8dc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: var(--roxo);
+}
+
+
+/* ===== 3. HERO ===== */
+.hero {
+  background: var(--cinza-fundo);
+  padding: 56px 0;
+}
+
+.hero-interno {
+  display: flex;             /* texto e imagem lado a lado */
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+.hero-texto h1 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-texto p {
+  color: var(--cinza-texto);
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+}
+
+.hero-imagem {
+  flex: 1;
+}
+
+.hero-imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--roxo-escuro);
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.botao:hover {
+  background: var(--escuro);
+}
+
+.botao:active {
+  transform: scale(0.97);
+}
+
+
+/* ===== 4. SEÇÕES GERAIS ===== */
+.secao {
+  padding: 72px 0;
+}
+
+.secao-clara {
+  background: var(--cinza-fundo);
+}
+
+.secao h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.intro {
+  color: var(--cinza-texto);
+  margin-bottom: 32px;
+}
+
+
+/* ===== 5. CARDS ===== */
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  background: var(--branco);
+  border: 1px solid #e3dde8;
+  border-top: 4px solid var(--roxo);
+  border-radius: 10px;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(38, 50, 56, 0.12);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: var(--roxo-escuro);
+}
+
+.card p {
+  color: var(--cinza-texto);
+  font-size: 0.95rem;
+}
+
+
+/* ===== 6. LISTA DE DICAS ===== */
+.dicas {
+  margin-top: 28px;
+  padding-left: 22px;       /* espaço para os números */
+}
+
+.dicas li {
+  margin-bottom: 18px;
+  padding-left: 6px;
+}
+
+.dicas li::marker {
+  color: var(--roxo-escuro);
+  font-weight: 700;
+}
+
+.dicas strong {
+  display: block;           /* título da dica numa linha separada */
+}
+
+
+/* ===== 7. TESTE DE SENHA ===== */
+.teste {
+  background: var(--branco);
+  border: 1px solid #e3dde8;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 6px 20px rgba(38, 50, 56, 0.08);
+}
+
+.teste label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.teste input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cfd4d6;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.teste input:focus {
+  border-color: var(--roxo-escuro);
+  box-shadow: 0 0 0 3px rgba(182, 106, 200, 0.25);
+}
+
+/* Barra de força */
+.barra {
+  height: 10px;
+  background: #e8e4ec;
+  border-radius: 999px;
+  margin: 18px 0 10px;
+  overflow: hidden;
+}
+
+.barra-preenchida {
+  height: 100%;
+  width: 0;                 /* o JavaScript muda a largura */
+  background: var(--fraca);
+  border-radius: 999px;
+  transition: width 0.3s, background 0.3s;
+}
+
+.resultado {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.checklist {
+  list-style: none;
+  font-size: 0.92rem;
+  color: var(--cinza-texto);
+}
+
+.checklist li {
+  padding: 3px 0 3px 22px;
+  position: relative;
+}
+
+/* Marcador feito só com CSS: bolinha vazia ou preenchida */
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #b8aebf;
+}
+
+.checklist li.ok {
+  color: var(--escuro);
+}
+
+.checklist li.ok::before {
+  background: var(--forte);
+  border-color: var(--forte);
+}
+
+.aviso {
+  display: block;
+  margin-top: 16px;
+  color: var(--cinza-texto);
+}
+
+
+/* ===== 8. RODAPÉ ===== */
+.rodape {
+  background: var(--escuro);
+  color: #cfd8dc;
+  text-align: center;
+  padding: 24px;
+  font-size: 0.9rem;
+}
+
+
+/* ===== 9. CELULAR (telas menores que 760px) ===== */
+@media (max-width: 760px) {
+  .hero-interno {
+    flex-direction: column;       /* texto em cima, imagem embaixo */
+    text-align: center;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.9rem;
+  }
+
+  .cards {
+    flex-direction: column;       /* cards um embaixo do outro */
+  }
+
+  .secao {
+    padding: 48px 0;
+  }
+}

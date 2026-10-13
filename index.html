@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Keyguard | Segurança de senhas</title>
+</head>
+<body>
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="topo">
+        <div class="conteudo topo-interno">
+         <a href="index.html" class="logo">
+            <img src="/img/Logo Keyguard com Escudo e Fechadura.png" alt="Keyguard">
+        </a>
+            <span class="logo">Keyguard</span>
+            <nav class="menu">
+                <a href="#perigos">Riscos</a>
+                <a href="#dicas">Dicas</a>
+                <a href="#teste">Teste</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO: título + imagem lado a lado ===== -->
+        <section class="hero">
+            <div class="conteudo hero-interno">
+                <div class="hero-texto">
+                    <h1>Sua senha é a chave de tudo o que você tem online</h1>
+                    <p>
+                        E-mail, banco, redes sociais e jogos dependem de uma senha.
+                        Entenda como ela é atacada e como criar uma que realmente protege.
+                    </p>
+                    <a href="#dicas" class="botao">Aprender agora</a>
+                </div>
+
+                <div class="hero-imagem">
+                    <img src="./img/Secure Server-amico.png" alt="Notebook, servidor e cadeado representando segurança digital">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RISCOS ===== -->
+        <section class="secao" id="perigos">
+            <div class="conteudo">
+                <h2>Como senhas fracas são descobertas</h2>
+                <p class="intro">Os ataques mais comuns não exigem nenhum "gênio hacker". Eles funcionam por tentativa e vazamento.</p>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Força bruta</h3>
+                        <p>Um programa tenta milhares de combinações por segundo. Senhas curtas caem em minutos.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Dicionário</h3>
+                        <p>O ataque testa palavras comuns, nomes e datas. "senha123" e "futebol2020" estão nessas listas.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Vazamentos</h3>
+                        <p>Quando um site é invadido, as senhas vazam. Se você usa a mesma em outro lugar, ela já foi testada.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DICAS ===== -->
+        <section class="secao secao-clara" id="dicas">
+            <div class="conteudo">
+                <h2>Como criar e cuidar das suas senhas</h2>
+
+                <ol class="dicas">
+                    <li>
+                        <strong>Prefira tamanho a complicação.</strong>
+                        Uma frase longa, como "cafe quente na chuva de domingo", é mais forte e mais fácil de lembrar que "P@ss1!".
+                    </li>
+                    <li>
+                        <strong>Uma senha diferente para cada conta.</strong>
+                        Assim, um vazamento não abre todas as suas portas.
+                    </li>
+                    <li>
+                        <strong>Use um gerenciador de senhas.</strong>
+                        Ele cria e guarda senhas únicas, e você só decora uma.
+                    </li>
+                    <li>
+                        <strong>Ative a verificação em duas etapas.</strong>
+                        Mesmo que a senha vaze, o invasor ainda precisa do seu celular.
+                    </li>
+                    <li>
+                        <strong>Não use dados pessoais.</strong>
+                        Nome, aniversário e time de futebol são os primeiros chutes de um atacante.
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ===== TESTE (usa o JavaScript) ===== -->
+        <section class="secao" id="teste">
+            <div class="conteudo conteudo-estreito">
+                <h2>Teste a força de uma senha</h2>
+                <p class="intro">Digite uma senha de exemplo. A análise acontece no seu navegador e nada é enviado ou salvo.</p>
+
+                <div class="teste">
+                    <label for="senha-teste">Senha de exemplo</label>
+                    <input type="text" id="senha-teste" placeholder="Digite aqui" autocomplete="off">
+
+                    <!-- Barra: a largura e a cor mudam pelo JavaScript -->
+                    <div class="barra">
+                        <div class="barra-preenchida" id="barra"></div>
+                    </div>
+
+                    <p class="resultado" id="resultado">Digite para ver o resultado.</p>
+                    <ul class="checklist" id="checklist"></ul>
+
+                    <small class="aviso">Não digite uma senha que você usa de verdade.</small>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <p>Keyguard. Projeto de estudo feito com HTML, CSS e JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
